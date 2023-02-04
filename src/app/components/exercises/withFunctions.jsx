@@ -9,6 +9,7 @@ const withFunctions = (Component) => (props) => {
     const onLogOut = () => {
         localStorage.removeItem("auth");
     };
+
     return (
         <CardWrapper>
             <Component

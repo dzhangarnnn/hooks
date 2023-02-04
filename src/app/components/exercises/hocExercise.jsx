@@ -6,6 +6,7 @@ import withFunctions from "./withFunctions";
 
 const HocExercise = () => {
     const ComponentWithHoc = withFunctions(SimpleComponent);
+
     return (
         <CollapseWrapper title="Упражнение">
             <p className="mt-3">

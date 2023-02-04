@@ -12,6 +12,7 @@ const SimpleComponent = ({ onLogin, onLogOut, isAuth }) => {
         </>
     );
 };
+
 SimpleComponent.propTypes = {
     onLogin: PropTypes.func,
     onLogOut: PropTypes.func,
