@@ -1,5 +1,7 @@
 import React from "react";
 import CollapseWrapper from "../common/collapse";
+import PropTypes from "prop-types";
+
 const ChildrenExercise = () => {
     return (
         <CollapseWrapper title="Упражнение">
@@ -11,25 +13,31 @@ const ChildrenExercise = () => {
                 <code>React.Children.toArray</code>
             </p>
 
-            {/* <ComponentList> */}
-            <Component />
-            <Component />
-            <Component />
-            {/* </ComponentList> */}
+            <ComponentList>
+                <Component />
+                <Component />
+                <Component />
+            </ComponentList>
         </CollapseWrapper>
     );
 };
 
-// const ComponentList = ({ children }) => {
-//     return React.Children.map(children, (child, i) => {
-//         const number = i + 1;
-//         return (
-//             <div className="d-flex">
-//                 {child} #{number}
-//             </div>
-//         );
-//     });
-// };
+const ComponentList = ({ children }) => {
+    return React.Children.map(children, (child, i) => {
+        const number = i + 1;
+        return (
+            <div className="d-flex">
+                {child} #{number}
+            </div>
+        );
+    });
+};
+ComponentList.propTypes = {
+    children: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node
+    ])
+};
 
 const Component = () => {
     return <div>Компонент списка</div>;
