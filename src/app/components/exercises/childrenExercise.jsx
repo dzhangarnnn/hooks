@@ -10,7 +10,6 @@ const ChildrenExercise = () => {
                 <code>React.Children.map</code> так и{" "}
                 <code>React.Children.toArray</code>
             </p>
-
             <Component />
             <Component />
             <Component />
