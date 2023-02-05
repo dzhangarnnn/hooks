@@ -1,18 +1,6 @@
 import React from "react";
 import CollapseWrapper from "../common/collapse";
 const UseRefExercise = () => {
-    // const divRef = useRef();
-    // const handleClick = () => {
-    //     divRef.current.innerText === "Блок"
-    //         ? (divRef.current.innerText = "text")
-    //         : (divRef.current.innerText = "Блок");
-    //     divRef.current.style.width === "60px"
-    //         ? (divRef.current.style.width = "80px")
-    //         : (divRef.current.style.width = "60px");
-    //     divRef.current.style.height === "40px"
-    //         ? (divRef.current.style.height = "150px")
-    //         : (divRef.current.style.height = "40px");
-    // };
     return (
         <CollapseWrapper title="Упражнение">
             <p className="mt-3">
@@ -34,9 +22,6 @@ const UseRefExercise = () => {
             >
                 <small>Блок</small>
             </div>
-            {/* <button className="btn btn-primary" onClick={handleClick}>
-                Изменить содержимое и размер блока
-            </button> */}
         </CollapseWrapper>
     );
 };
